@@ -1,0 +1,47 @@
+:root {
+    --bluetoviolet: linear-gradient(to right, #1f4edb , #85006e );
+    --lightblue: #73b2ff;
+    --darkblue: #0b164f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--bluetoviolet);
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+main {
+    width: 90%;
+}
+
+.citySearch {
+    justify-content: left;
+    float: left;
+}
+
+.weatherDisplay {
+    float: center;
+    margin-right: 20px;
+    padding: 20px;
+    width: 20%;
+    height: 100%;
+    border: 2px solid var(gray);
+}
+
+.fiveDayDisplay {
+    justify-content: right;
+    flex-wrap: wrap;
+    background-color: var(--darkblue);
+}
+
+.searchBtn {
+    padding: 15px;
+    margin: 7px;
+    background-color: var(--lightblue);
+    color: azure;
+}

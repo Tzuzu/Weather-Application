@@ -54,11 +54,20 @@ function getFiveDayForecast(lat, lon) {
         .then(function (response) {
             return response.json();
         })
+        .then(function (data) {
+            displayFiveDayForecast(data.list);
+        })
 
 }
 
 function displayFiveDayForecast(weatherData) {
     var forecastArray = [];
+
+    for (var i = 7; i < weatherData.length; i += 8) {
+        forecastArray.push(weatherData[i]);
+    }
+
+    console.log(forecastArray);
 
     var forecastElement = document.getElementsByClassName('forecast');
     for (var i = 0; i < forecastElement.length; i++) {

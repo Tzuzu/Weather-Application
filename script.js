@@ -1,5 +1,3 @@
-// https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={f71a0ffd0ff5f743a225eb896129f195}
-
 var citySearch = document.getElementById('searchBar');
 var searchBtn = document.getElementById('searchBtn');
 var searchTerm = document.getElemenyById('searchTerm');

@@ -1,6 +1,6 @@
 var citySearch = document.getElementById('searchBar');
 var searchBtn = document.getElementById('searchBtn');
-var searchTerm = document.getElemenyById('searchTerm');
+var searchTerm = document.getElementById('searchTerm');
 var searchResults = document.querySelector('#searchTerm');
 var fiveDay = document.querySelector('#fiveDayDisplay');
 var weatherDisplay = document.querySelector('#weatherDisplay');

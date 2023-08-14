@@ -5,14 +5,12 @@
 }
 
 * {
-    /* box-sizing: border-box; */
     font-family: sans-serif;
 }
 
 header {
     background: var(--bluetoviolet);
     text-align: center;
-    margin: 10px;
     padding: 10px;
     color: white;
 }
@@ -20,26 +18,62 @@ header {
 .citySearch {
     justify-content: left;
     float: left;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.search-input {
+    height: 20px;
+}
+
+.searchResults {
+    justify-content: left;
+    float: left;
+    text-align: center;
 }
 
 .weatherDisplay {
-    float: center;
-    margin-right: 20px;
-    padding: 20px;
-    width: 20%;
-    height: 100%;
-    border: 2px solid var(gray);
+    float: right;
+    width: 80%;
+    color: white;
+    background-color: black;
+    margin: 10px;
+}
+
+.weatherDisplay div {
+    padding-left: 5px;
 }
 
 .fiveDayDisplay {
-    justify-content: right;
-    flex-wrap: wrap;
-    background-color: var(--darkblue);
+    color: white;
+    width: 80%;
+    float: right;
+    margin: 10px;
 }
 
-.searchBtn {
-    padding: 15px;
-    margin: 7px;
-    background-color: var(--lightblue);
-    color: azure;
+.row {
+    display: flex;
+    gap: 10px;
+    text-align: left;
 }
+
+.row div {
+    flex: 1;
+    background-color: var(--darkblue);
+    border: 1px solid black;
+    padding-left: 5px;
+}
+
+button {
+    background-color: var(--lightblue);
+    color: var(--darkblue);
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+
+body { margin: 0; }

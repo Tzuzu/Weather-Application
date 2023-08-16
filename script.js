@@ -43,7 +43,7 @@ function saveToLocalStorage(city) {
 }
 
 function getWeather(lat, lon) {
-    var request = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=f71a0ffd0ff5f743a225eb896129f195'
+    var request = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=f71a0ffd0ff5f743a225eb896129f195'
     console.log(request);
     
     fetch(request)
@@ -63,14 +63,14 @@ function displayWeather(weatherData) {
     var humidity = document.getElementById('humidity');
 
     cityName.textContent = weatherData.name;
-    image.setAttribute('src', "https://openweathermap.org/img/wn/" + weatherData.weather[0].icon + "@2x.png")
+    image.setAttribute('src', "http://openweathermap.org/img/wn/" + weatherData.weather[0].icon + "@2x.png")
     temp.textContent = "Temp: " + weatherData.main.temp + "\u00b0"
     wind.textContent = "Wind: " + weatherData.wind.speed + "MPH"
     humidity.textContent = "Humidity: " + weatherData.main.humidity + "%"
 }
 
 function getCity(cityName) {
-    var request = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=f71a0ffd0ff5f743a225eb896129f195'
+    var request = 'http://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=f71a0ffd0ff5f743a225eb896129f195'
     console.log(request);
     saveToLocalStorage(cityName);
 
@@ -88,7 +88,7 @@ function getCity(cityName) {
 }
 
 function getFiveDayForecast(lat, lon) {
-    var request = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=f71a0ffd0ff5f743a225eb896129f195';
+    var request = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=f71a0ffd0ff5f743a225eb896129f195';
     console.log(request)
 
     fetch(request)
@@ -113,7 +113,7 @@ function displayFiveDayForecast(weatherData) {
     var forecastElement = document.getElementsByClassName('forecast');
     for (var i = 0; i < forecastElement.length; i++) {
         forecastElement[i].children[0].textContent = "Date: " + forecastArray[i].dt_txt;
-        forecastElement[i].children[1].setAttribute('src', "https://openweathermap.org/img/wn/" + forecastArray[i].weather[0].icon + "@2x.png")
+        forecastElement[i].children[1].setAttribute('src', "http://openweathermap.org/img/wn/" + forecastArray[i].weather[0].icon + "@2x.png")
         forecastElement[i].children[2].textContent = "Temp: " + forecastArray[i].main.temp + "\u00b0";
         forecastElement[i].children[3].textContent = "Wind: " + forecastArray[i].wind.speed + "mph";
         forecastElement[i].children[4].textContent = "Humidity: " + forecastArray[i].main.humidity+ "%" ;

@@ -76,7 +76,7 @@ function getCity(cityName) {
 
     fetch(request)
         .then (function (response) {
-            return response.json();
+            response.json();
         })
         .then(function (data) {
             var lat = data[0].lat;

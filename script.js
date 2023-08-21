@@ -38,6 +38,7 @@ function saveToLocalStorage(city) {
     searchList.push(searchTerm);
     localStorage.setItem('city', JSON.stringify(searchList));
     getSearch(searchTerm);
+    loadSearch();
 }
 
 function getWeather(lat, lon) {
